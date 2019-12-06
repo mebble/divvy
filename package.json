@@ -1,0 +1,28 @@
+{
+  "name": "divvy-app",
+  "version": "0.0.0",
+  "description": "A web app for splitting the bill",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mebble/divvy.git"
+  },
+  "keywords": [
+    "bill",
+    "cash",
+    "money",
+    "split"
+  ],
+  "author": "Neil Leeson Syiemlieh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mebble/divvy/issues"
+  },
+  "homepage": "https://github.com/mebble/divvy#readme",
+  "devDependencies": {
+    "tape": "^4.11.0"
+  }
+}
