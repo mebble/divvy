@@ -4,7 +4,7 @@
   "description": "A web app for splitting the bill",
   "main": "index.js",
   "scripts": {
-    "test": "node tests/index.js"
+    "test": "tape src/**/*.test.js"
   },
   "repository": {
     "type": "git",
