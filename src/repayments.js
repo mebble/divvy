@@ -1,4 +1,4 @@
-const SIGNIFICANCE = 1e-2;
+const { SIGNIFICANCE } = require('./utils');
 
 const round = num => {
     /**
