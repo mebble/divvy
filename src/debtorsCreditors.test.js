@@ -3,11 +3,11 @@ const test = require('tape');
 const { debtorsCreditors, alignDescending } = require('./debtorsCreditors');
 
 test('creditors and debtors are non-zero', assert => {
-    const effectiveDebts = [
-        { name: 'a', amount: -10 },
-        { name: 'b', amount: 0 },
-        { name: 'c', amount: 10 },
-    ];
+    const effectiveDebts = {
+        'a': -10,
+        'b': 0,
+        'c': 10,
+    };
     const expected = [
         [
             { name: 'c', amount: 10 }
@@ -22,14 +22,14 @@ test('creditors and debtors are non-zero', assert => {
 });
 
 test('creditors and debtors are significantly-valued', assert => {
-    const effectiveDebts = [
-        { name: 'a', amount: 10 },
-        { name: 'b', amount: -20 },
-        { name: 'c', amount: 1e-2 },
-        { name: 'd', amount: -2e-2 },
-        { name: 'e', amount: 2e-3 },
-        { name: 'f', amount: -2e-3 },
-    ];
+    const effectiveDebts = {
+        'a': 10,
+        'b': -20,
+        'c': 1e-2,
+        'd': -2e-2,
+        'e': 2e-3,
+        'f': -2e-3,
+    };
     const expected = [
         [
             { name: 'a', amount: 10 },

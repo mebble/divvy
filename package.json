@@ -24,5 +24,8 @@
   "homepage": "https://github.com/mebble/divvy#readme",
   "devDependencies": {
     "tape": "^4.11.0"
+  },
+  "dependencies": {
+    "fromentries": "^1.2.0"
   }
 }

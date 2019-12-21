@@ -10,7 +10,7 @@ module.exports.debtorsCreditors = effectiveDebts => {
     const debtors = [];
     const creditors = [];
 
-    for (const { name, amount } of effectiveDebts) {
+    for (const [ name, amount ] of Object.entries(effectiveDebts)) {
         if (Math.abs(amount) >= SIGNIFICANCE) {
             if (amount > 0) {
                 debtors.push({ name, amount });
