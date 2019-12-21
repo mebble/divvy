@@ -1,11 +1,4 @@
-const { SIGNIFICANCE } = require('./utils');
-
-const round = num => {
-    /**
-     * https://stackoverflow.com/a/11832950
-     */
-    return Math.round(num * 100) / 100;
-};
+const { SIGNIFICANCE, roundTwoPlaces } = require('./utils');
 
 module.exports = (debtors, creditors) => {
     const payments = [];
@@ -13,7 +6,7 @@ module.exports = (debtors, creditors) => {
         const { name: debtName, amount: debt } = debtors[0];
         const { name: credName, amount: cred } = creditors[0];
 
-        const remaining = round(Math.abs(cred - debt));
+        const remaining = roundTwoPlaces(Math.abs(cred - debt));
         if (remaining < SIGNIFICANCE) {
             [_, ...debtors] = debtors;
             [_, ...creditors] = creditors;

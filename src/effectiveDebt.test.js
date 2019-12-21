@@ -42,3 +42,24 @@ test('cyclic graph', assert => {
 
     assert.end();
 });
+
+test('fractional effective debts', assert => {
+    const debtGraph = [
+        { from: 'a', to: 'b', amount: 9.99 },
+        { from: 'b', to: 'c', amount: 10 },
+        { from: 'c', to: 'a', amount: 9.989 },
+    ];
+    const expected = {
+        'a': 0,
+        'b': 0.01,
+        'c': -0.01
+    };
+    const actual = effectiveDebt(debtGraph);
+    assert.deepEqual(actual, expected, 'insignificant effective debts should be zeroed');
+
+    const sum = Object.values(actual)
+        .reduce((acc, x) => acc + x);
+    assert.equal(sum, 0, 'sum of effective debts should be zero');
+
+    assert.end();
+});
