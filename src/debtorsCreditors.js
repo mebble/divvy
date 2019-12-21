@@ -6,7 +6,7 @@ const comparatorDesc = (a, b) => {
     return amountB - amountA;
 };
 
-module.exports = effectiveDebts => {
+module.exports.debtorsCreditors = effectiveDebts => {
     const debtors = [];
     const creditors = [];
 
@@ -20,8 +20,11 @@ module.exports = effectiveDebts => {
         }
     }
 
-    debtors.sort(comparatorDesc);
-    creditors.sort(comparatorDesc);
+    return [ debtors, creditors ];
+};
 
+module.exports.alignDescending = (debtors, creditors) => {
+    debtors = [...debtors].sort(comparatorDesc);
+    creditors = [...creditors].sort(comparatorDesc);
     return [ debtors, creditors ];
 };
