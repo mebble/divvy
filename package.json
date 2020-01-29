@@ -1,5 +1,5 @@
 {
-  "name": "divvy-app",
+  "name": "yaray",
   "version": "0.0.0",
   "description": "A web app for splitting the bill",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mebble/divvy.git"
+    "url": "git+https://github.com/mebble/yaray.git"
   },
   "keywords": [
     "bill",
@@ -19,9 +19,9 @@
   "author": "Neil Leeson Syiemlieh",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mebble/divvy/issues"
+    "url": "https://github.com/mebble/yaray/issues"
   },
-  "homepage": "https://github.com/mebble/divvy#readme",
+  "homepage": "https://github.com/mebble/yaray#readme",
   "devDependencies": {
     "tape": "^4.11.0"
   },
